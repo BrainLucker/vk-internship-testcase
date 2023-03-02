@@ -7,8 +7,8 @@ import static com.codeborne.selenide.Selenide.$;
 public class SearchEnginePage {
     private final SelenideElement searchInput = $("input[name=text]");
 
-    public SearchResultsPage search(String info) {
-        searchInput.val("Selenium").pressEnter();
+    public SearchResultsPage search(String word) {
+        searchInput.val(word).pressEnter();
         return new SearchResultsPage();
     }
 }
