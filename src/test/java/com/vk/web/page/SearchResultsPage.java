@@ -6,10 +6,11 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class SearchResultsPage {
-    private final SelenideElement topResultHeader = $("ul[id=search-result] li[data-cid=\"0\"] h2");
+    private final SelenideElement resultsList = $("ul[id=search-result]");
+    private final SelenideElement topResultHeader = resultsList.$("li[data-fast=\"1\"] h2");
 
     public SearchResultsPage() {
-        topResultHeader.shouldBe(visible);
+        resultsList.shouldBe(visible);
     }
 
     public String getTopResultHeaderText() {
