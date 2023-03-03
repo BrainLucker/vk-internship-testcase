@@ -21,7 +21,7 @@ public class SearchByWordTest {
     }
 
     @Test
-    public void shouldShowSearchedWordInTopResult() {
+    public void shouldShowSearchedWordInTopResultHeader() {
         String searchedWord = "Selenium";
         SearchEnginePage searchPage = open(searchEngineURL, SearchEnginePage.class);
         SearchResultsPage resultsPage = searchPage.search(searchedWord);
